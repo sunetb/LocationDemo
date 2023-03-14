@@ -78,7 +78,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1234);
             text.setText("Press again");
             return;
-
         }
 
         //We ask if Location is enabled in settings
@@ -150,12 +149,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 } else {
                     text.setText("Error: No location");
                     askToEnableLocation();
-
                 }
             }
         });
     }
-
 
     //Helper method
     //If the user disabled GPS location on their phone, we ask them to turn it on
@@ -192,11 +189,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
             }
         });
-
     }
 
 //Just for fun
-
     private void startMaps() {
 
 // Create a Uri from an intent string. Use the result to create an Intent.
@@ -209,8 +204,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 // Attempt to start an activity that can handle the Intent
         startActivity(mapIntent);
-
     }
-
-
 }
